@@ -1,0 +1,31 @@
+//title
+@mixin title {
+    position: relative;
+    width: 266px;
+    height: 92px;
+    margin: 120px auto 60px;
+    background: $bgClour1;
+    color: $fontClour;
+    text-align: center;
+
+    &::after{
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 50px;
+            height: 50px;
+            display: block;
+            background: $bgClour2;
+            opacity: 0.4;
+    }
+
+    & > h2{
+            font-size: 3rem;
+            padding-top: 10px;
+    }
+    & > h3{
+            font-size: 2.2rem;
+            font-weight: lighter;
+    }
+}
