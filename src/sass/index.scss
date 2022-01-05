@@ -422,7 +422,7 @@ header{
 //main
 main{
      width: 100%;
-     height: 5000px;
+     height: auto;
      background: linear-gradient(
           to right, rgba(121,162,255,0.5), rgba(30,175,114,0.5), rgba(0,188,29,0.5)
      );
@@ -594,12 +594,277 @@ main{
      }
 }
 
+.introductionBg{
+     position: relative;
+     width: 100%;
+     height: auto;
+
+     .teachersBg_item01 img{
+          position: absolute;
+          top: -100px;
+          right: -350px;
+          width: 850px;
+          height: 400px;
+     }
+     .teachersBg_item02 img{
+          position: absolute;
+          bottom: -100px;
+          left: -400px;
+          width: 850px;
+          height: 400px;
+     }
+}
+
 .introduction{
+     position: relative;
+     width: 1000px;
+     margin: auto;
+     
+     .title{
+          @include title;
+     }
+}
+
+.teachersBg{
+     width: 100%;
+     margin-top: 70px;
+
+     .teachersFlex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          .teachersDetail{
+               position: relative;
+               width: 285px;
+               height: 516px;
+
+               .teacherClip{
+                    position: relative;
+                    width: 100%;
+                    height: 274px;
+                    clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+                    background: $bgClour1;
+               }
+               .teachersImg{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    width: 275px;
+                    height: 264px;
+                    clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+                    background: url(../img/teacher01.png) center no-repeat;
+                    background-size: cover;
+               }
+          }
+
+          .teacherFontBg{
+               position: absolute;
+               width: 100%;
+               height: 274px;
+               bottom: 15px;
+               background: $bgClour1;
+               padding: 20px;
+               color: white;
+               clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+
+               .teacherFont{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    width: 275px;
+                    height: 264px;
+                    padding: 50px 20px;
+                    background: $bgClour2;
+                    clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+
+                    h4{
+                         font-size: 1.4rem;
+                    }
+                    h5{
+                         font-size: 3.2rem;
+                         padding-bottom: 15px;
+                    }
+                    p{
+                         font: 1.2rem;
+                         line-height: 2.4rem;
+                    }
+               }      
+          }
+     }
+}
+
+.introBtc,
+.introBtc > a{
+     display: block;
+     width: 250px;
+     height: 70px;
+     margin: 90px auto;
+     border-radius: 20px;
+     background: linear-gradient(to right, rgba(90, 0, 255, 0.5), rgba(1, 133, 173, 0.5), rgba(0, 213, 33, 0.5));
+     font-size: 2.4rem;
+     font-weight: bolder;
+     color: white;
+     text-decoration: none;
+     text-align: center;
+     line-height: 70px;
+}
+
+.price {
+     position: relative;
      width: 1000px;
      height: auto;
      margin: auto;
-
+     
      .title{
           @include title;
+          margin-top: 200px;
+          margin-bottom: 100px;
+     }
+
+     .plans {
+          width: 100%;
+          height: 240px;
+          border: 5px solid $bgClour1;
+          background: url(../img/priceRight.png) center right no-repeat;
+          margin-bottom: 100px;
+
+          .plans_flex{
+               display: flex;
+               align-items: center;
+               justify-content: flex-start;
+               flex-wrap: nowrap;
+
+               .plansPrice {
+                    width: 40%;
+                    height: 100%;
+                    line-height: 220px;
+                    font-size: 6rem;
+                    color: #FC6969;
+                    text-align: center;
+
+                    span{
+                         font-size: 2.2rem;
+                         color: black;
+                    }
+               }
+               .plansName {
+                    width: 40%;
+                    height: 100%;
+
+                    h5{
+                         width: 300px;
+                         height: auto;
+                         padding-bottom: 10px;
+                         font-size: 5rem;
+                         color: $bgClour1;
+                         text-align: center;
+                         border-bottom: 1px solid black;
+                    }
+                    p{
+                         width: 300px;
+                         height: auto;
+                         font-size: 2.4rem;
+                         text-align: center;
+                    }
+               }
+          }
+     }
+}
+
+.place{
+     position: relative;
+     width: 1000px;
+     height: auto;
+     margin: auto;
+     
+     .title{
+          @include title;
+          margin-top: 200px;
+          margin-bottom: 100px;
+     }
+}
+.place_flex {
+     width: 100%;
+     height: 165px;
+     margin-bottom: 25px;
+     border: 5px solid $bgClour1;
+     display: flex;
+     flex-wrap: nowrap;
+
+     .placeImg > img{
+          width: 400px;
+          height: 100%;
+          object-fit: cover;
+     }
+     .placeDetail{
+          width: 600px;
+          height: 100%;
+          color: white;
+
+          h4{
+               margin-top: 40px;
+               margin-left: 70px;
+               font-size: 2.4rem;
+          }
+          p{
+               margin-top: 10px;
+               margin-left: 300px;
+               font-size: 1.4rem;
+          }
+     }
+     .placeDetail02{
+          text-align: center;
+          margin-top: 40px;
+          margin-left: 50px;
+
+          h4{
+               font-size: 2.4rem;
+               color: $bgClour1;
+          }
+          p{
+               margin-top: 15px;
+               font-size: 1.4rem;
+          }
+     }
+}
+
+.thought{
+     position: relative;
+     width: 100%;
+     height: 1000px;
+     background: chocolate;
+     
+     .title{
+          @include title;
+          margin-top: 200px;
+          margin-bottom: 100px;
+     }
+
+     .line{
+          position: absolute;
+     }
+     .thoughtLine01{
+          top: 150px;
+          left: -50px;
+     }
+     .thoughtLine02{
+          top: 250px;
+          left: -50px;
+     }
+     .thoughtLine03{
+          bottom: -50px;
+          right: 200px;
+     }
+     .thoughtLine04{
+          bottom: -50px;
+          right: 100px;
      }
 }

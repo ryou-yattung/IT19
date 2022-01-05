@@ -985,7 +985,7 @@ header .nav ul #document a:hover {
 
 main {
   width: 100%;
-  height: 5000px;
+  height: auto;
   background: linear-gradient(to right, rgba(121, 162, 255, 0.5), rgba(30, 175, 114, 0.5), rgba(0, 188, 29, 0.5));
 }
 
@@ -1189,9 +1189,31 @@ main {
   background-size: cover;
 }
 
-.introduction {
-  width: 1000px;
+.introductionBg {
+  position: relative;
+  width: 100%;
   height: auto;
+}
+
+.introductionBg .teachersBg_item01 img {
+  position: absolute;
+  top: -100px;
+  right: -350px;
+  width: 850px;
+  height: 400px;
+}
+
+.introductionBg .teachersBg_item02 img {
+  position: absolute;
+  bottom: -100px;
+  left: -400px;
+  width: 850px;
+  height: 400px;
+}
+
+.introduction {
+  position: relative;
+  width: 1000px;
   margin: auto;
 }
 
@@ -1225,4 +1247,351 @@ main {
 .introduction .title > h3 {
   font-size: 2.2rem;
   font-weight: lighter;
+}
+
+.teachersBg {
+  width: 100%;
+  margin-top: 70px;
+}
+
+.teachersBg .teachersFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.teachersBg .teachersFlex .teachersDetail {
+  position: relative;
+  width: 285px;
+  height: 516px;
+}
+
+.teachersBg .teachersFlex .teachersDetail .teacherClip {
+  position: relative;
+  width: 100%;
+  height: 274px;
+  -webkit-clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+          clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+  background: #00ADA0;
+}
+
+.teachersBg .teachersFlex .teachersDetail .teachersImg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 275px;
+  height: 264px;
+  -webkit-clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+          clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+  background: url(../img/teacher01.png) center no-repeat;
+  background-size: cover;
+}
+
+.teachersBg .teachersFlex .teacherFontBg {
+  position: absolute;
+  width: 100%;
+  height: 274px;
+  bottom: 15px;
+  background: #00ADA0;
+  padding: 20px;
+  color: white;
+  -webkit-clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+          clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+}
+
+.teachersBg .teachersFlex .teacherFontBg .teacherFont {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 275px;
+  height: 264px;
+  padding: 50px 20px;
+  background: #4C8FE5;
+  -webkit-clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+          clip-path: polygon(40% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 40% 100%, 0 100%, 0 10%);
+}
+
+.teachersBg .teachersFlex .teacherFontBg .teacherFont h4 {
+  font-size: 1.4rem;
+}
+
+.teachersBg .teachersFlex .teacherFontBg .teacherFont h5 {
+  font-size: 3.2rem;
+  padding-bottom: 15px;
+}
+
+.teachersBg .teachersFlex .teacherFontBg .teacherFont p {
+  font: 1.2rem;
+  line-height: 2.4rem;
+}
+
+.introBtc,
+.introBtc > a {
+  display: block;
+  width: 250px;
+  height: 70px;
+  margin: 90px auto;
+  border-radius: 20px;
+  background: linear-gradient(to right, rgba(90, 0, 255, 0.5), rgba(1, 133, 173, 0.5), rgba(0, 213, 33, 0.5));
+  font-size: 2.4rem;
+  font-weight: bolder;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 70px;
+}
+
+.price {
+  position: relative;
+  width: 1000px;
+  height: auto;
+  margin: auto;
+}
+
+.price .title {
+  position: relative;
+  width: 266px;
+  height: 92px;
+  margin: 120px auto 60px;
+  background: #00ADA0;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.price .title::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: #4C8FE5;
+  opacity: 0.4;
+}
+
+.price .title > h2 {
+  font-size: 3rem;
+  padding-top: 10px;
+}
+
+.price .title > h3 {
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+
+.price .plans {
+  width: 100%;
+  height: 240px;
+  border: 5px solid #00ADA0;
+  background: url(../img/priceRight.png) center right no-repeat;
+  margin-bottom: 100px;
+}
+
+.price .plans .plans_flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.price .plans .plans_flex .plansPrice {
+  width: 40%;
+  height: 100%;
+  line-height: 220px;
+  font-size: 6rem;
+  color: #FC6969;
+  text-align: center;
+}
+
+.price .plans .plans_flex .plansPrice span {
+  font-size: 2.2rem;
+  color: black;
+}
+
+.price .plans .plans_flex .plansName {
+  width: 40%;
+  height: 100%;
+}
+
+.price .plans .plans_flex .plansName h5 {
+  width: 300px;
+  height: auto;
+  padding-bottom: 10px;
+  font-size: 5rem;
+  color: #00ADA0;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.price .plans .plans_flex .plansName p {
+  width: 300px;
+  height: auto;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.place {
+  position: relative;
+  width: 1000px;
+  height: auto;
+  margin: auto;
+}
+
+.place .title {
+  position: relative;
+  width: 266px;
+  height: 92px;
+  margin: 120px auto 60px;
+  background: #00ADA0;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.place .title::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: #4C8FE5;
+  opacity: 0.4;
+}
+
+.place .title > h2 {
+  font-size: 3rem;
+  padding-top: 10px;
+}
+
+.place .title > h3 {
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+
+.place_flex {
+  width: 100%;
+  height: 165px;
+  margin-bottom: 25px;
+  border: 5px solid #00ADA0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.place_flex .placeImg > img {
+  width: 400px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.place_flex .placeDetail {
+  width: 600px;
+  height: 100%;
+  color: white;
+}
+
+.place_flex .placeDetail h4 {
+  margin-top: 40px;
+  margin-left: 70px;
+  font-size: 2.4rem;
+}
+
+.place_flex .placeDetail p {
+  margin-top: 10px;
+  margin-left: 300px;
+  font-size: 1.4rem;
+}
+
+.place_flex .placeDetail02 {
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.place_flex .placeDetail02 h4 {
+  font-size: 2.4rem;
+  color: #00ADA0;
+}
+
+.place_flex .placeDetail02 p {
+  margin-top: 15px;
+  font-size: 1.4rem;
+}
+
+.thought {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  background: chocolate;
+}
+
+.thought .title {
+  position: relative;
+  width: 266px;
+  height: 92px;
+  margin: 120px auto 60px;
+  background: #00ADA0;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.thought .title::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: #4C8FE5;
+  opacity: 0.4;
+}
+
+.thought .title > h2 {
+  font-size: 3rem;
+  padding-top: 10px;
+}
+
+.thought .title > h3 {
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+
+.thought .line {
+  position: absolute;
+}
+
+.thought .thoughtLine01 {
+  top: 150px;
+  left: -50px;
+}
+
+.thought .thoughtLine02 {
+  top: 250px;
+  left: -50px;
+}
+
+.thought .thoughtLine03 {
+  bottom: -50px;
+  right: 200px;
+}
+
+.thought .thoughtLine04 {
+  bottom: -50px;
+  right: 100px;
 }
