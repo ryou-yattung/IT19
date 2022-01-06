@@ -1193,13 +1193,14 @@ main {
   position: relative;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .introductionBg .teachersBg_item01 img {
   position: absolute;
-  top: -100px;
-  right: -350px;
-  width: 850px;
+  top: 0px;
+  right: -400px;
+  width: 800px;
   height: 400px;
 }
 
@@ -1534,8 +1535,7 @@ main {
 .thought {
   position: relative;
   width: 100%;
-  height: 1000px;
-  background: chocolate;
+  height: 1200px;
 }
 
 .thought .title {
@@ -1574,6 +1574,7 @@ main {
 
 .thought .line {
   position: absolute;
+  z-index: 100;
 }
 
 .thought .thoughtLine01 {
@@ -1587,11 +1588,166 @@ main {
 }
 
 .thought .thoughtLine03 {
-  bottom: -50px;
-  right: 200px;
+  bottom: -30px;
+  right: 150px;
 }
 
 .thought .thoughtLine04 {
-  bottom: -50px;
-  right: 100px;
+  bottom: -30px;
+  right: 50px;
+}
+
+.thought .thoughtFont {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  margin-top: 300px;
+  font-size: 2.4rem;
+}
+
+.thought .thoughtFont p {
+  margin-bottom: 20px;
+}
+
+.contact {
+  position: relative;
+  width: 100%;
+  height: 1150px;
+  background: #646464;
+  z-index: 200;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+form {
+  position: relative;
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  color: white;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+}
+
+form .phone {
+  position: absolute;
+  top: 400px;
+  right: 0;
+  text-align: center;
+}
+
+form .phone h3 {
+  font-size: 2.4rem;
+}
+
+form .phone p {
+  font-size: 4rem;
+}
+
+form label {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+form .company input {
+  width: 200px;
+  height: 40px;
+  background: white;
+  margin-bottom: 24px;
+}
+
+form .name input {
+  width: 200px;
+  height: 40px;
+  background: white;
+  margin-bottom: 24px;
+}
+
+form .mail input {
+  width: 345px;
+  height: 40px;
+  background: white;
+  margin-bottom: 24px;
+}
+
+form .contactType input {
+  width: 268px;
+  height: 40px;
+  background: white;
+  margin-bottom: 24px;
+}
+
+form .contactAbout textarea {
+  width: 400px;
+  height: 150px;
+  background: white;
+  margin-bottom: 50px;
+}
+
+form .btn {
+  width: 85px;
+  height: 40px;
+  text-align: center;
+  background: #00ADA0;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+.footerNav {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  color: white;
+  margin-top: 32px;
+}
+
+.footerNav .footerNav_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.footerNav .footerNav_flex ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerNav .footerNav_flex ul li {
+  list-style: none;
+}
+
+.footerNav .footerNav_flex a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.footerNav .footerNav_flex img {
+  width: 292px;
+  height: 51px;
+}
+
+.footerNav .ig {
+  width: 60px;
+  height: 60px;
+  float: right;
+  margin-top: 32px;
+}
+
+footer {
+  background: #646464;
+  text-align: center;
+  color: white;
+  padding-bottom: 50px;
+  font-size: 1.4rem;
 }
