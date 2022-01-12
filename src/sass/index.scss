@@ -423,9 +423,9 @@ header{
 main{
      width: 100%;
      height: auto;
-     background: linear-gradient(
-          to right, rgba(121,162,255,0.5), rgba(30,175,114,0.5), rgba(0,188,29,0.5)
-     );
+     background: 
+          url(../img/round-bg.png)center bottom no-repeat,
+          #004E49;
 }
 
 .feature{
@@ -559,6 +559,7 @@ main{
           display: flex;
           align-items: center;
           justify-content: space-between;
+          margin-bottom: 100px;
 
           .contentImg{
                width: 280px;
@@ -569,16 +570,23 @@ main{
                font-size: 2rem;
           }
           p{
-               margin-top: 25px;
+               width: 300px;
+               height: 200px;
+               //margin-top: 25px;
                padding: 40px 30px;
                background: #ABDAD8;
                border: 5px solid $bgClour1;
                color: #585858;
-               font-size: 1.4rem;
+               font-size: 1rem;
                text-align: left;
+               line-height: 15px;
                box-shadow: 3px 3px 16px $bgClour1;
                border-radius: 12px;
-          }
+               -webkit-border-radius: 12px;
+               -moz-border-radius: 12px;
+               -ms-border-radius: 12px;
+               -o-border-radius: 12px;
+}
           .content01{
                background: url(../img/content1.png) center no-repeat;
                background-size: cover;
@@ -590,6 +598,74 @@ main{
           .content03{
                background: url(../img/content3.png) center no-repeat;
                background-size: cover;
+          }
+     }
+}
+
+.flowBg{
+     position: relative;
+     width: 100vw;
+     height: 770px;
+     z-index: 200;
+
+     &::before{
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: white;
+          filter: blur(4px);
+          z-index: 100;
+          -webkit-filter: blur(4px);
+     }
+}
+
+.flow {
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin: auto;
+     width: 1000px;
+     height: auto;
+     z-index: 300;
+
+     .title{
+          @include title;
+     }
+
+     .flow_flew {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .flow_flewItem{
+               width: 214px;
+               height: 303px;
+               padding: 60px 20px;
+               border: 5px solid $bgClour1;
+               border-radius: 12px;
+               box-shadow: 0 0 16px $bgClour1;
+               -webkit-border-radius: 12px;
+               -moz-border-radius: 12px;
+               -ms-border-radius: 12px;
+               -o-border-radius: 12px;
+
+               h4{
+                    margin-bottom: 20px;
+                    font-size: 2.6rem;
+                    font-weight: bolder;
+                    color: $bgClour1;
+                    text-align: center;
+               }
+
+               p{
+                    font-size: 1.4rem;
+                    line-height: 28px;
+                    color: $bgClour2;
+               }
           }
      }
 }
@@ -811,7 +887,7 @@ main{
           color: white;
 
           h4{
-               margin-top: 40px;
+               margin-top: 30px;
                margin-left: 70px;
                font-size: 2.4rem;
           }
@@ -822,9 +898,12 @@ main{
           }
      }
      .placeDetail02{
+          width: 600px;
+          height: 100%;
           text-align: center;
-          margin-top: 40px;
-          margin-left: 50px;
+          padding-top: 30px;
+          padding-left: 50px;
+          text-align: left;
 
           h4{
                font-size: 2.4rem;
@@ -833,8 +912,15 @@ main{
           p{
                margin-top: 15px;
                font-size: 1.4rem;
+               color: #313131;
           }
      }
+}
+.place_flex1{
+     background: $bgClour2;
+}
+.place_flex2{
+     background-color: white;
 }
 
 .thought{
@@ -876,8 +962,24 @@ main{
           margin-top: 300px; 
           font-size: 2.4rem;
 
+          h4{
+               font-size: 4rem;
+               text-align: center;
+               color: #DEDEDE;
+               text-shadow: 0px 3px 16px #00ADA0;
+               margin-bottom: 32px;
+          }
+
           p{
                margin-bottom: 20px;
+               font-size: 2.4rem;
+               line-height: 40px;
+               color: #DEDEDE;
+               text-shadow: 0px 3px 16px #00ADA0;
+
+               span{
+                  color: #FC6969;  
+               }
           }
      }
 }
@@ -886,7 +988,7 @@ main{
      position: relative;
      width: 100%;
      height: 1150px;
-     background: rgb(100, 100, 100);
+     background: url(../img/contactBg.png);
      z-index: 200;
 
      h2{
@@ -1009,7 +1111,7 @@ form{
 }
 
 footer{
-     background: rgb(100, 100, 100);
+     background: #313131;
      text-align: center;
      color: white;
      padding-bottom: 50px;
